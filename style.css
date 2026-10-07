@@ -1,0 +1,275 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  /* Set Inter font globally for content details */
+  font-family: "Inter", sans-serif;
+    
+  background-color: #e5fcfd;
+
+  /* Grid background */
+  background-image:
+    radial-gradient( #c2d3fd 1px, transparent 1px),
+    radial-gradient( #c2d3fd 1px, transparent 1px);
+
+  background-size: 20px 20px;
+  
+}
+
+
+/* 
+   CARD CONTAINER
+*/
+
+.card-container {
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+/* 
+   BASE CARD STYLE
+ */
+
+.card {
+  width: 480px;
+  aspect-ratio: 480 / 280;
+
+  flex: 1 1 480px;
+
+  background-color: #ffffff;
+  border-radius: 15px;
+
+  padding: 32px 36px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+  /* Light wave/grid pattern texture */
+  /* background-image: radial-gradient(#e2e8f0 1.2px, transparent 1.2px);
+  background-size: 10px 10px; */
+}
+
+
+/*
+   FRONT CARD
+ */
+
+.card-front {
+  color: #111827;
+}
+
+.profile-info .person-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0d0d0d;
+  line-height: 1.2;
+}
+
+.profile-info .person-title {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #4b5563;
+  margin-top: 2px;
+}
+
+.contact-details {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #1f2937;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.front-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.location-info {
+  font-size: 0.72rem;
+  color: #4b5563;
+  line-height: 1.35;
+}
+
+/* BRANDING & LOGO */
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: oklab(37.083% -0.02368 -0.17153);
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+}
+
+
+/* 
+   BACK CARD
+ */
+
+.card-back {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.center-brand {
+
+  position: relative;
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-brand .brand-text {
+  
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: -15px;
+}
+
+.center-brand .brand-name {
+  font-size: 1.6rem;
+  letter-spacing: 7px;
+}
+
+.center-brand .brand-sub {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+/* Semi-transparent center watermark logo */
+.center-watermark {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 170px;
+  height: auto;
+  opacity: 0.22;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.radial-background{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: auto;
+  opacity: 8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 
+   FRONT CARD TEXT LAYERING
+ */
+
+.card-front .profile-info,
+.card-front .contact-details,
+.card-front .front-footer {
+  position: relative;
+  z-index: 2;
+}
+
+.frontradial-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* PARTNER LOGOS STRIP */
+
+.partner-logos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  z-index: 2;
+}
+
+.partner-img {
+  height: 40px;
+  width: auto;
+  object-fit:contain;
+}
+
+.partner-round {
+  border-radius: 50%;
+}
+
+
+
